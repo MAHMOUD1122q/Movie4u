@@ -1,0 +1,30 @@
+.movie-list {
+  margin: 0 80px;
+}
+.movie-list .swiper-slide {
+  width: 18%;
+}
+@media (max-width:768px) {
+  .movie-list {
+    margin: 0 10px;
+  }
+  .movie-list .swiper-slide {
+    width: 32%;
+  }
+}
+@media (min-width:769px) and (max-width:991px) {
+  .movie-list {
+    margin: 0 10px;
+  }
+  .movie-list .swiper-slide {
+    width: 20%;
+  }
+}
+@media (min-width:992px) and (max-width:1199px) {
+  .movie-list {
+    margin: 0 10px;
+}
+.movie-list .swiper-slide {
+  width: 20%;
+}
+}

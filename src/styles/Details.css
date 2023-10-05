@@ -1,0 +1,261 @@
+.banner {
+  width: 100%;
+  height: 70vh;
+  background-position: 0px -80px ;
+  background-size: cover;
+  position: relative;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  z-index: 500;
+  background-image: linear-gradient(to top, var(--body-bg) 10% , transparent);
+}
+.over {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 70vh;
+  background-color: rgb(0 0 0 / 60%);
+}
+.movie-container {
+  display: flex;
+  position: relative;
+  top: -180px;
+  margin: 0 250px;
+  z-index: 500;
+}
+.movie-container .title,
+.genres,.overview ,.cast {
+  margin-left: 40px;
+}
+.genres {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.genres span {
+  margin-right: 10px;
+  padding: 8px 20px;
+  border: 1px solid var(--white);
+  border-radius: 20px;
+}
+/* .movie-video iframe,
+.trailer .trailer-container iframe {
+  border: 0;
+} */
+.overview {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+.casts{
+  display: flex;
+  margin-right: 10px;
+  flex-wrap: wrap;
+}
+.casts .casts-item {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.casts .casts-item img {
+  border-radius: 10px;
+}
+.casts .casts-item .casts-item-name {
+  font-size: 12px;
+  font-weight: 800;
+}
+.trailer {
+  padding-bottom: 80px;
+}
+.trailer .trailer-container {
+  text-align: center;
+}
+.trailer .trailer-container .trailer__title {
+  margin: 10px 0;
+}
+.movie-video,
+.watch-video {
+  padding-bottom: 50px;
+  text-align: center;
+}
+.movie__title,
+.watch-video .video__title {
+  margin-bottom: 10px;
+}
+.seasons {
+  text-align: right;
+  margin-right: 15px;
+  padding-top: 10px;
+}
+.seasons-btn {
+  color: white;
+  border: 0;
+  background-color: var(--main-color);
+  padding: 10px 60px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+.download,
+.download-episode,
+.seasons-download {
+  text-align: right;
+  margin-right: 20px;
+  margin-bottom: 18px;
+}
+.download h2,
+.download-episode h2,
+.seasons-download h2 {
+  margin: 10px 60px;
+}
+.download button,
+.download-episode button,
+.seasons-download button {
+  margin: 10px 10px;
+  border: 0;
+  background-color: transparent;
+}
+.download button .link,
+.download-episode button .link,
+.seasons-download button .link {
+  padding: 13px 60px;
+  border: 1px solid var(--white);
+  color: var(--white);
+  background-color: transparent;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.download button .link:hover,
+.download-episode button .link:hover,
+.seasons-download button .link:hover {
+  color: var(--main-color);
+  background-color: var(--white);
+}
+.episode {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+.episode-buttons button {
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  margin-right: 10px;
+  transition: 0.5s;
+}
+.episode-buttons button:hover {
+  opacity: 0.5;
+}
+.episode-buttons button span {
+  background-color: var(--white);
+}
+.active-tab {
+  cursor: no-drop !important;
+  background-color: rgb(182, 1, 1);
+}
+.active-tab-video {
+  pointer-events: none;
+  opacity: 0.5;
+}
+@media (max-width:768px) {
+  .banner {
+    background-position: center;
+  }
+  .movie-container {
+    text-align: center;
+    margin: 0 17px;
+    flex-direction: column;
+  }
+  .movie-container .title, .genres, .overview, .cast {
+    margin-left: 0;
+  }
+  .casts {
+    margin: 0;
+  }
+  .movie-video iframe,
+  .trailer .trailer-container iframe {
+    width: 360px;
+
+  }
+  .video .watch-video iframe {
+    width: 360px;
+  }
+  .download,
+  .download-episode, .seasons-download {
+    text-align: center;
+    margin-bottom: 18px;
+    margin-right: 0;
+  }
+  .seasons {
+    text-align: center;
+    margin-right: 0;
+    padding-top: 10px;
+  }
+  .episode {
+    margin-left: 15px;
+  }
+  .episode-buttons button {
+    margin-bottom: 10px;
+  }
+  .episode-buttons button img {
+    width: 150px !important;
+    height: 100px !important;
+  }
+  .episode-buttons button span {
+    width: 150px !important;
+  }
+  .download button,
+  .download-episode button, .seasons-download button {
+    margin: 17px 10px;
+    border: 0;
+  }
+  .movie-video, .watch-video {
+    padding: 0;
+  }
+}
+@media (min-width:769px) and (max-width:991px) {
+  .banner {
+    background-position: center;
+  }
+  .movie-container {
+    text-align: center;
+    margin: 0 17px;
+    flex-direction: column;
+  }
+  .movie-container .title, .genres, .overview, .cast {
+    margin-left: 0;
+  }
+  .casts {
+    margin: 0;
+  }
+  .movie-video iframe,
+  .trailer .trailer-container iframe,
+  .video .watch-video iframe {
+    width: 650px;
+  }
+  .download button,
+  .download-episode button, .seasons-download button {
+    margin: 17px 10px;
+    border: 0;
+  }
+  .episode {
+    margin-top: 0;
+  }
+  .episode-buttons button {
+    margin-bottom: 10px;
+  }
+}
+@media (min-width:992px) and (max-width:1199px) {
+  .banner {
+    background-position: center;
+  }
+  .movie-container {
+    margin:0 78px;
+  }
+}

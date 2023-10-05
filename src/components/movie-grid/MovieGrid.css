@@ -1,0 +1,28 @@
+.movie-grid {
+  margin-left: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+}
+.movie-grid .card {
+  margin-top: 20px;
+  margin-right: 15px;
+  width: 18%;
+}
+@media (max-width:768px) {
+  .movie-grid{
+    margin: 0 10px;
+  }
+  .movie-grid .card {
+    width: 30%;
+    margin-right: 11px;
+  }
+}
+@media (min-width:769px) and (max-width:991px) {
+  .movie-grid{
+    margin-left: 6px;
+  }
+  .movie-grid .card {
+    width: 23%;
+  }
+}

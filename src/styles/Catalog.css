@@ -1,0 +1,106 @@
+.movieGrid {
+  display: flex;
+  justify-content: space-between;
+}
+.box select {
+  color: white;
+  padding: 12px;
+  width: 230px;
+  border: none;
+  font-size: 18px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  background-color: var(--main-color);
+  border-radius: 10px;
+}
+.box {
+  position: relative;
+  margin-right: 20px;
+}
+.box::before {
+  content: "\f13a";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 0;
+  right: -7px;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 45px;
+  color: rgb(228, 87, 77);
+  pointer-events: none;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.box:hover::before {
+  color: rgba(255, 255, 255, 0.9);
+}
+.box select option {
+  padding: 30px ;
+}
+.movieGrid .container {
+  display: flex;
+  margin-left: 80px;
+}
+@media (max-width:768px) {
+  .movieGrid {
+    align-items: center;
+    justify-content: center;
+    flex-direction:column
+  }
+  .box {
+    margin: 10px 0;
+  }
+  .box::before {
+    display: none;
+  }
+  .movieGrid .container{
+    margin: 0 10px;
+  }
+}
+.movieGrid .container .input {
+  position: relative;
+  width: 400px;
+}
+@media (max-width:768px) {
+  .movieGrid .container .input{
+    width: 200px;
+  }
+}
+@media (min-width:769px) and (max-width:991px) {
+  .movieGrid {
+    align-items: center;
+    justify-content: center;
+    flex-direction:column
+  }
+  
+  .box {
+    margin: 10px 0;
+  }
+  .box::before {
+    display: none;
+  }
+  .movieGrid .container .input{
+    width: 250px;
+  }
+}
+.movieGrid .container .input input {
+  border: 0;
+  width: 100%;
+  padding: 15px 10px;
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 10px;
+}
+.movieGrid .container .input .search {
+  border: 0;
+  position: absolute;
+  right: 0;
+  color: var(--white);
+  background-color: var(--main-color);
+  border-radius: 10px;
+  box-shadow: 0px 1px 7px 0px var(--main-color);
+  padding: 14px 20px;
+}

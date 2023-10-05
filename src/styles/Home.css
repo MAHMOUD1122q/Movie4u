@@ -1,0 +1,38 @@
+.content{
+padding-bottom: 50px;
+}
+.section__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 80px;
+}
+@media (max-width:768px) {
+  .section__header {
+    margin: 20px 11px;
+  }
+}
+@media (min-width:769px) and (max-width:991px) {
+  .section__header {
+    margin: 20px 11px;
+  }
+}
+@media (min-width:992px) and (max-width:1199px) {
+.section__header {
+  margin: 20px 11px;
+}
+}
+.section__header .small {
+  border: 0;
+  color: var(--white);
+  background-color: transparent;
+  padding: 10px 30px;
+  border: 1px solid var(--white);
+  border-radius: 20px;
+  text-transform: capitalize;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.section__header .small:hover {
+  background-color: var(--white);
+  color: var(--main-color);
+}
